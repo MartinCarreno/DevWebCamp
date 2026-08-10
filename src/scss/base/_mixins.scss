@@ -49,10 +49,10 @@
 }
 
 @mixin contenedor {
-    //max-width: 120rem;
+    //max-width: 160rem;
     //width: 95%;
     //con lo de abajo se reemplaza en el primer parametro el width y en el segundo el max-width
-    width: min(95%, 120rem);
+    width: min(95%, 160rem);
     margin: 0 auto;
 }
 
