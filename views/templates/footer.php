@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__grid">
         <div class="footer__contenido">
-            <h3 class="header__logo">
+            <h3 class="footer__logo">
                 &#60;DevWebCamp />
             </h3>
 
