@@ -66,14 +66,14 @@
         &--modalidad {
             font-size: 2rem;
         }
-
-        &__boton {
-            @include m.boton(v.$secundario, v.$blanco);
-            text-transform: uppercase;
-            margin: 2rem 0;
-            @include m.tablet {
-                width: auto;
-            }
+    }
+    &__boton {
+        @include m.boton(v.$secundario, v.$blanco);
+        text-transform: uppercase;
+        margin: 2rem 0;
+        @include m.tablet {
+            width: auto;
         }
     }
+
 }
