@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\DashboardController;
 use MVC\Router;
 use Controllers\AuthController;
 
@@ -29,5 +30,7 @@ $router->post('/reestablecer', [AuthController::class, 'reestablecer']);
 $router->get('/mensaje', [AuthController::class, 'mensaje']);
 $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 
+//Area de Admin
+$router->get('/admin/dashboard', [DashboardController::class, 'index']);
 
 $router->comprobarRutas();
