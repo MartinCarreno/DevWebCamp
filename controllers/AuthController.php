@@ -189,7 +189,7 @@ class AuthController {
 
                 // Redireccionar
                 if($resultado) {
-                    header('Location: /');
+                    header('Location: /login');
                 }
             }
         }
@@ -198,7 +198,7 @@ class AuthController {
         
         // Muestra la vista
         $router->render('auth/reestablecer', [
-            'titulo' => 'Reestablecer Password',
+            'titulo' => 'Recuperar Password',
             'alertas' => $alertas,
             'token_valido' => $token_valido
         ]);
