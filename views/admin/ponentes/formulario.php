@@ -1,5 +1,5 @@
-<fieldset>
-    <legend>Informacion Personal</legend>
+<fieldset class="formulario__fieldset">
+    <legend class="formulario__legend">Informacion Personal</legend>
 
     <div class="formulario__campo">
         <label for="nombre" class="formulario__label">Nombre</label>
