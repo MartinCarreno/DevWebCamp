@@ -2,3 +2,5 @@ includes/.env
 .env
 node_modules
 vendor
+
+img/
