@@ -44,6 +44,7 @@
   &__grid {
     display: flex;
     flex: 1;
+    overflow-y: auto; //para fijar el menu para el scroll del formulario, en el contenedor del formulario se coloca scroll en vez de auto
   }
 
   &__sidebar {
@@ -86,6 +87,7 @@
   &__contenido {
     width: 100%;
     padding: 1rem 1rem 3 rem 1rem;
+    overflow-y: scroll;
     @include m.tablet {
       padding: 1rem 5rem 3rem 5rem;
     }
