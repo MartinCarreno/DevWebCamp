@@ -8,6 +8,12 @@
 
         let tags = [];
 
+        //recuperar input oculto
+        if(tagsInputHidden.value != '') {
+            tags = tagsInputHidden.value.split(',');
+            mostrarTags();
+        }
+
         // escuchar los cambios en el input
         tagsInput.addEventListener('keypress', guardarTag)
 
