@@ -10,6 +10,10 @@ class PonentesController {
     public static function index(Router $router) {
         $ponentes = Ponente::all();
 
+        if(!is_auth()) {
+            header('Location: /login');
+        }
+
         $router->render('admin/ponentes/index', [
             'titulo' => 'Ponentes - Conferencistas',
             'ponentes' => $ponentes
@@ -17,10 +21,17 @@ class PonentesController {
     }
 
     public static function crear(Router $router) {
+        if(!is_auth()) {
+            header('Location: /login');
+        }
+
         $alertas = [];
         $ponente = new Ponente;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if(!is_auth()) {
+                header('Location: /login');
+            }
             //leer imagen
             if(!empty($_FILES['imagen']['tmp_name'])) {
 
@@ -74,6 +85,10 @@ class PonentesController {
 
     public static function editar(Router $router) {
 
+        if(!is_auth()) {
+            header('Location: /login');
+        }
+
         $alertas = [];
         //validar Id
         $id = $_GET['id'];
@@ -94,6 +109,10 @@ class PonentesController {
         $redes = json_decode($ponente->redes);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if(!is_auth()) {
+                header('Location: /login');
+            }
+
             if(!empty($_FILES['imagen']['tmp_name'])) {
 
                 $carpeta_imagenes = '../public/img/speakers';
@@ -142,7 +161,9 @@ class PonentesController {
     }
 
     public static function eliminar() {
-
+        if(!is_auth()) {
+            header('Location: /login');
+        }
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $id = $_POST['id'];
